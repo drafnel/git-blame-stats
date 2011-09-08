@@ -309,7 +309,7 @@ getopts('cfj:lsvx:') or die 'Invalid options specified';
 	} elsif ($opt_s) {
 		$output_format = 1;
 	}
-	if (defined $opt_j) {
+	if ($opt_j) {
 		$nthreads = $opt_j;
 		if ($nthreads !~ /^\d+$/ || $nthreads < 0) {
 			die 'Error: argument to -j must be integer >= 0';
